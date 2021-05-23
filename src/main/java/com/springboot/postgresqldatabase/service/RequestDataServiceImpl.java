@@ -52,7 +52,6 @@ public class RequestDataServiceImpl implements RequestDataService {
 
     @Override
     public List<RequestData> getAllRequestData() {
-
         return this.requestDataRepository.findAll();
     }
 
@@ -62,7 +61,7 @@ public class RequestDataServiceImpl implements RequestDataService {
         if(requestDataDb.isPresent()) {
             return requestDataDb.get();
         } else {
-            throw new ResourceNotFoundException("Record not found with id :" + id);
+            throw new ResourceNotFoundException(("Record not found with id :" + id));
         }
 
     }

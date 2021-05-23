@@ -27,7 +27,7 @@ public class RequestDataController {
        return ResponseEntity.ok().body(requestDataService.getRequestDataById(id));
    }
 
-   @PostMapping("/requestData")
+   @PostMapping("/createrequestData")
     public ResponseEntity<RequestData> createRequestData(@RequestBody RequestData requestData) {
        return ResponseEntity.ok().body(this.requestDataService.createRequestData(requestData));
    }
